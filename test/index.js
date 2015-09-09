@@ -31,6 +31,7 @@ var FULL_OPTIONS = [
     '--pseudo-class-separator=_',
     '--quiet',
     '--recursive',
+    '--ratio-delimiter=-',
     '--ratios=2,1.5,1',
     '--retina',
     '--source=./dir',
@@ -93,6 +94,7 @@ describe('gulp-sprite-glue', function() {
                 pseudoClassSeparator: '_',
                 quiet: true,
                 recursive: true,
+                ratioDelimiter: '-',
                 ratios: '2,1.5,1',
                 retina: true,
                 source: './dir',
@@ -109,7 +111,7 @@ describe('gulp-sprite-glue', function() {
     });
     it('createCommand', function() {
         var com = generator.createCommand('./sprite','./output',FULL_OPTIONS);
-        assert(com === 'glue ./sprite ./output --algorithm=square --crop --caat --cachebuster --cachebuster-filename --cachebuster-filename-only-sprites --cocos2d --css=./test/css --img=./test/sprite --css-template=./my_template.jinja --force --follow-links --html --json --json-format=hash --less --less-template=./my_template.jinja --margin=10 20 30 40 --namespace=hoge --no-img --no-css --ordering=maxside --padding=10 20 30 40 --png8 --project --pseudo-class-separator=_ --quiet --recursive --ratios=2,1.5,1 --retina --source=./dir --output=./output --scss --scss-template=./my_template.jinja --separator=- --sprite-namespace=ns --url=http://example.com --watch');
+        assert(com === 'glue ./sprite ./output --algorithm=square --crop --caat --cachebuster --cachebuster-filename --cachebuster-filename-only-sprites --cocos2d --css=./test/css --img=./test/sprite --css-template=./my_template.jinja --force --follow-links --html --json --json-format=hash --less --less-template=./my_template.jinja --margin=10 20 30 40 --namespace=hoge --no-img --no-css --ordering=maxside --padding=10 20 30 40 --png8 --project --pseudo-class-separator=_ --quiet --recursive --ratio-delimiter=- --ratios=2,1.5,1 --retina --source=./dir --output=./output --scss --scss-template=./my_template.jinja --separator=- --sprite-namespace=ns --url=http://example.com --watch');
 
         com = generator.createCommand('./sprite','./output',[]);
         assert(com === 'glue ./sprite ./output');

@@ -33,6 +33,7 @@ var COMMANDS = {
     pseudoClassSeparator: '--pseudo-class-separator=%val%',
     quiet: '--quiet',
     recursive: '--recursive',
+    ratioDelimiter: '--ratio-delimiter=%val%',
     ratios: '--ratios=%val%',
     retina: '--retina',
     source: '--source=%val%',
